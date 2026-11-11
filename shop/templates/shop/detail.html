@@ -1,0 +1,9 @@
+{% extends 'shop/base.html' %}
+{% block content %}
+<h1 class="h3">{{ product.name }}</h1>
+{% if product.image %}<img src="{{ product.image.url }}" width="240" alt="">{% endif %}
+<p>{{ product.description }}</p>
+<h3>{{ product.price }} сом</h3>
+<p>Остаток: {{ product.stock }}</p>
+<a href="{% url 'catalog' %}">Назад в каталог</a>
+{% endblock %}
